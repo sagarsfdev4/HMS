@@ -1,0 +1,37 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 08-11-2022
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card>
+            <lightning-button 
+                name="New"
+                label="New"
+                variant="brand"
+                slot="actions"
+                class="slds-m-right_small"
+                title="Add New Hospital"
+                onclick={showModalBox}
+            ></lightning-button>
+            
+            <lightning-button 
+                name="All Hospitals"
+                label="All Hospitals"
+                variant="brand"
+                slot="actions"
+                class="slds-m-right_small"
+                title="List All Hospitals"
+            ></lightning-button>
+    </lightning-card>
+
+    <c-create-hospital
+      is-show-modal={isShowModal}
+      object-name={objectName}
+      objct-fields={objctFields}
+      onclose={hideModalBox}
+    > 
+    </c-create-hospital>     
+</template>

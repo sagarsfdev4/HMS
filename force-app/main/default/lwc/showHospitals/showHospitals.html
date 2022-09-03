@@ -1,0 +1,21 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 08-16-2022
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card
+        title="All Hospitals">
+        <lightning-datatable
+            key-field="Id"
+            data={hospitalList}
+            columns={columns}
+            hide-checkbox-column
+            show-row-number-column
+            onclick={handleSelectedRecord}
+            >
+        </lightning-datatable>
+    </lightning-card>
+</template>
